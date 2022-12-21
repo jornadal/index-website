@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tagay ta</title>
+</head>
+   <style>
+   	h1{
+        color: Red;
+        background: black;
+        padding:10px;
+   	}
+          
+         body 
+   {
+     background: url(img/shat.jpg);
+     
+     background-size: cover;
+     background-position: center;
+
+          
+          
+    </style>
+<body>
+	<center>
+	<h1>HOI TARA SHAT </h1>
+	
+
+<button id='btn_test'>hindi ko</button>
+<button><a href="abol.html">Sige ah</a></button>
+<script>
+//sets a random absolute position to a html element; receives the html element
+function moveElmRand(elm){
+ elm.style.position ='absolute';
+ elm.style.top = Math.floor(Math.random()*90+5)+'%';
+ elm.style.left = Math.floor(Math.random()*90+5)+'%';
+}
+
+//get the #btn_test
+var btn_test = document.querySelector('#btn_test');
+
+//register to call moveElmRand() on mouseenter event to #btn_test
+btn_test.addEventListener('mouseenter', function(e){ moveElmRand(e.target);});
+
+//register click to #btn_test
+btn_test.addEventListener('click', function(e){ alert('ediwag');});
+</script>
+
+
+</body>
+</html>
